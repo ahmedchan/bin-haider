@@ -1,0 +1,46 @@
+
+///////// colors
+$primaryColor: #4952a3;
+$textColor: #1d1d1d;
+$borderColor: #080808;
+$bgColor: #FFFFFF;
+$goldColor: #cf9c33;
+
+
+//////////// fonts
+$primaryFontBold: 'MrEavesXLModOT-Bold';
+$primaryFontReg: 'MrEavesXLModOT-Reg';
+$fontAwesome: 'Font Awesome 5 Free';
+//$textFont: ;
+//$headingFont: ;
+
+
+
+///////// susy config
+$susy: (
+	flow: ltr,
+	columns: 12,
+	gutters: 1/4,
+	container:940px,
+	math: fluid,
+	output: float,
+	gutter-position: after
+);
+
+
+///////////// mixin
+@include border-box-sizing;
+
+////////////// mixins
+@mixin strip-modal {
+	margin:0;
+	padding:0;
+}
+// Mixin itself
+@mixin cfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
